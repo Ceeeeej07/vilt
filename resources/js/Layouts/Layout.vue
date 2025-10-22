@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { route } from "../../../vendor/tightenco/ziggy/src/js";
+</script>
 
 <template>
     <div>
@@ -7,8 +9,8 @@
                 class="flex items-center justify-between p-4 max-w-5xl mx-auto"
             >
                 <div class="space-x-5">
-                    <Link href="/">Home</Link>
-                    <Link href="/about">About</Link>
+                    <Link :href="route('home')">Home</Link>
+                    <Link :href="route('about')">About</Link>
                 </div>
             </nav>
         </header>
