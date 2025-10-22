@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
     <div>
         <header class="bg-green-500 text-white">
@@ -5,8 +7,8 @@
                 class="flex items-center justify-between p-4 max-w-5xl mx-auto"
             >
                 <div class="space-x-5">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
+                    <Link href="/">Home</Link>
+                    <Link href="/about">About</Link>
                 </div>
             </nav>
         </header>
