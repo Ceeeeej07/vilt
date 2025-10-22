@@ -20,4 +20,15 @@ createInertiaApp({
             .component("Head", Head)
             .mount(el);
     },
+
+    progress: {
+        // The color of the progress bar...
+        color: "red",
+
+        // Whether to include the default NProgress styles...
+        includeCSS: true,
+
+        // Whether the NProgress spinner will be shown...
+        showSpinner: true,
+    },
 });
