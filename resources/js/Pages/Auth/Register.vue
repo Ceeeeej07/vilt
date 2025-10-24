@@ -47,7 +47,6 @@ const submit = () => {
                     v-model="registerForm.password_confirmation"
                     name="Confirm Password"
                     type="password"
-                    :message="registerForm.errors.password_confirmation"
                 />
                 <button
                     @click.prevent="submit"
