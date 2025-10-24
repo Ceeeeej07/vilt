@@ -59,7 +59,7 @@ const submit = () => {
                     Already have an account?
                     <!-- //must change this link if i have login file -->
                     <Link
-                        :href="route('home')"
+                        :href="route('login')"
                         class="text-green-800 font-bold hover:underline"
                     >
                         Log in

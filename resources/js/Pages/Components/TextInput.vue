@@ -6,7 +6,7 @@ const model = defineModel({
 
 defineProps({
     name: { type: String, required: true },
-    type: { type: String, default: "text" },
+    type: { type: String, required: true },
     message: String,
 });
 </script>
@@ -22,9 +22,9 @@ defineProps({
                     ? 'border-red-500'
                     : 'border-gray-300 focus:border-black focus:ring-2 focus:ring-black',
             ]"
-            :type="text"
+            :type="type"
             required
-            placeholder="Name"
+            :placeholder="name"
         />
         <small class="text-red-600" v-if="message">{{ message }}</small>
     </div>
