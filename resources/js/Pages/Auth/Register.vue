@@ -9,7 +9,11 @@ const registerForm = useForm({
 });
 
 const submit = () => {
-    registerForm.post("/register");
+    registerForm.post("/register", {
+        onError: () => {
+            registerForm.reset("password", "password_confirmation");
+        },
+    });
 };
 </script>
 
@@ -82,7 +86,8 @@ const submit = () => {
                 </div>
                 <button
                     @click.prevent="submit"
-                    class="mt-6 w-full bg-green-800 text-white font-bold py-3 px-6 rounded-2xl hover:bg-green-900 transition duration-200"
+                    class="disabled:opacity-50 mt-6 w-full bg-green-800 text-white font-bold py-3 px-6 rounded-2xl hover:bg-green-900 transition duration-200"
+                    :disabled="registerForm.processing"
                 >
                     Register
                 </button>
