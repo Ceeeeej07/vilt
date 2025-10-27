@@ -61,7 +61,7 @@ const submit = () => {
                 </button>
                 <p class="mt-4 text-center text-sm text-gray-600">
                     Need an account?
-                    <!-- //must change this link if i have login file -->
+
                     <Link
                         :href="route('register')"
                         class="text-green-800 font-bold hover:underline"

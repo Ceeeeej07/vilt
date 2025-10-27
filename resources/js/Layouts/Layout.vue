@@ -11,7 +11,16 @@ import { route } from "../../../vendor/tightenco/ziggy/src/js";
                 <div class="space-x-5">
                     <Link :href="route('home')">Home</Link>
                 </div>
-                <div class="space-x-5">
+                <div v-if="$page.props.auth.user" class="space-x-5">
+                    <Link
+                        method="post"
+                        as="button"
+                        type="button"
+                        :href="route('logout')"
+                        >Logout</Link
+                    >
+                </div>
+                <div v-else class="space-x-5">
                     <Link :href="route('register')">Register</Link>
                     <Link :href="route('login')">Login</Link>
                 </div>

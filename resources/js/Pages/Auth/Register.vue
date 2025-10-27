@@ -57,7 +57,7 @@ const submit = () => {
                 </button>
                 <p class="mt-4 text-center text-sm text-gray-600">
                     Already have an account?
-                    <!-- //must change this link if i have login file -->
+
                     <Link
                         :href="route('login')"
                         class="text-green-800 font-bold hover:underline"
